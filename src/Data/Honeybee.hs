@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Honeybee (parseBValue, BValue(..)) where
+module Data.Honeybee (parseBValue, BValue(..)) where
 
 import Control.Applicative
 import Data.Attoparsec.Combinator
