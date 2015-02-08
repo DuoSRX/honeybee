@@ -1,8 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Bencoding (parseBValue, BValue(..)) where
 
-import Test.QuickCheck
-
 import Control.Applicative
 import Control.Monad
 import Data.Attoparsec.Combinator
