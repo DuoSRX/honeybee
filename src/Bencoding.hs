@@ -2,10 +2,8 @@
 module Bencoding (parseBValue, BValue(..)) where
 
 import Control.Applicative
-import Control.Monad
 import Data.Attoparsec.Combinator
 import Data.Attoparsec.ByteString.Char8
-import Data.Word
 
 import qualified Data.Map as M
 
