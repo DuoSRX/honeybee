@@ -16,6 +16,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
+  ghc-options: -Wall -fno-warn-unused-do-bind
   exposed-modules:     Bencoding
   build-depends:       base >=4.7 && <4.8
                      , attoparsec >= 0.12.1.2
