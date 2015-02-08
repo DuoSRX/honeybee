@@ -1,4 +1,4 @@
-# BEncoding
+# Honey Bee
 
 A simple BEncoding parser made for learning purposes.
 

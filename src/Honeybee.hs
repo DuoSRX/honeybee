@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Bencoding (parseBValue, BValue(..)) where
+module Honeybee (parseBValue, BValue(..)) where
 
 import Control.Applicative
 import Data.Attoparsec.Combinator
