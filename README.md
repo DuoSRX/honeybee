@@ -1,4 +1,4 @@
-# Honey Bee
+# Honey Bee [![TravisCI](https://travis-ci.org/DuoSRX/honeybee.svg)](https://travis-ci.org/DuoSRX/honeybee)
 
 A simple BEncoding parser made for learning purposes.
 
