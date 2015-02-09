@@ -34,7 +34,7 @@ parseString = do
   len <- many1 digit
   char ':'
   s <- count (read len) anyChar
-  return $ BString s
+  return $ BString (B.pack s)
 
 -- | Parse a list
 --
