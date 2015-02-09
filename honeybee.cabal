@@ -22,9 +22,13 @@ source-repository head
 library
   ghc-options: -Wall -fno-warn-unused-do-bind
   exposed-modules:     Data.Honeybee
+                     , Data.Honeybee.Decode
+                     , Data.Honeybee.Encode
+                     , Data.Honeybee.Types
   build-depends:       base >=4.7 && <4.8
                      , attoparsec >= 0.12.1.2
                      , containers >= 0.5.5.1
+                     , bytestring >= 0.10.4.0
   hs-source-dirs:      src
   default-language:    Haskell2010
 
