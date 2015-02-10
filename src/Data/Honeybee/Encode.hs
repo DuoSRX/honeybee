@@ -2,9 +2,10 @@
 module Data.Honeybee.Encode (encode) where
 
 import Data.Honeybee.Types
+import Data.Monoid ((<>))
+import Data.Foldable (foldMap)
 import qualified Data.ByteString.Char8 as B
 import qualified Data.Map as M
-import Data.Monoid
 
 -- $setup
 -- >>> :set -XOverloadedStrings
@@ -18,7 +19,7 @@ import Data.Monoid
 encode :: BValue -> B.ByteString
 encode (BString s)  = (B.pack . show $ B.length s) <> ":" <> s
 encode (BInteger i) = "i" <> B.pack (show i) <> "e"
-encode (BList l)    = "l" <> mconcat (map encode l) <> "e"
+encode (BList l)    = "l" <> foldMap encode l <> "e"
 encode (BDict d)    = "d" <> M.foldWithKey fromPair "" d <> "e"
 
 fromPair :: BValue -> BValue -> B.ByteString -> B.ByteString
