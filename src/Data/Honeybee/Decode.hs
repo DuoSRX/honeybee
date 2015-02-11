@@ -19,9 +19,9 @@ import qualified Data.Map as M
 parseInteger :: Parser BValue
 parseInteger = do
   char 'i'
-  num <- many1 digit
+  num <- signed decimal
   char 'e'
-  return $ BInteger (read num)
+  return $ BInteger num
 
 -- | Parse a string
 -- 

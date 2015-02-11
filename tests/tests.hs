@@ -13,6 +13,10 @@ main = hspec $ do
       let i = decode "i3e"
       i `shouldBe` Right (BInteger 3)
 
+    it "return a negative BInteger" $ do
+      let i = decode "i-13e"
+      i `shouldBe` Right (BInteger (-13))
+
   describe "Parse list" $ do
     it "parse an empty list" $ do
       let list = decode "le"
