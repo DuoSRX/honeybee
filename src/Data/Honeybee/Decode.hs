@@ -50,7 +50,7 @@ parseList = do
   return $ BList list
 
 -- | Parse a dictionary
--- 
+--
 -- >>> decode "d3:cow3:moo4:spam4:eggse"
 -- Right (BDict (fromList [(BString "cow",BString "moo"),(BString "spam",BString "eggs")]))
 -- >>> decode "d4:spaml1:a1:bee"
@@ -69,7 +69,7 @@ parseDict = do
 -- >>> parseOnly parseDictPair "3:cowi2e"
 -- Right (BString "cow",BInteger 2)
 -- >>> parseOnly parseDictPair "i10ei2e"
--- Left "Failed reading: satisfyWith"
+-- Left "digit: Failed reading: satisfyWith"
 parseDictPair :: Parser (BValue, BValue)
 parseDictPair = do
   key <- parseString

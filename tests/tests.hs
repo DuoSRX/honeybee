@@ -41,7 +41,7 @@ main = hspec $ do
 
     it "fails on invalid string length" $ do
       let s = decode "5:spam"
-      s `shouldBe` Left "Failed reading: satisfyWith"
+      s `shouldBe` Left "d: Failed reading: satisfyWith"
 
   describe "Parse dictionary" $ do
     it "parse an empty dictionary" $ do
