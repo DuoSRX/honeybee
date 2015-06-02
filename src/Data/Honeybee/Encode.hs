@@ -3,6 +3,7 @@ module Data.Honeybee.Encode (encode) where
 
 import Data.Honeybee.Types
 import Data.Monoid ((<>))
+import Data.Foldable (foldMap)
 import qualified Data.ByteString.Char8 as B
 import qualified Data.Map as M
 
