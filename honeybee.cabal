@@ -26,7 +26,7 @@ library
                      , Data.Honeybee.Encode
                      , Data.Honeybee.Types
   build-depends:       base       >= 4.3      && <5
-                     , attoparsec >= 0.12.0.0 && <0.13
+                     , attoparsec >= 0.12.0.0 && <0.14
                      , containers >= 0.5.0.0  && <0.6
                      , bytestring >= 0.10.0.0 && <0.11
   hs-source-dirs:      src
@@ -41,7 +41,7 @@ test-suite tests
   build-depends: base
                , attoparsec
                , containers
-               , hspec >= 2.0 && <2.1
+               , hspec >= 2.0
                , honeybee
 
 test-suite doctests
@@ -50,4 +50,4 @@ test-suite doctests
   type:             exitcode-stdio-1.0
   main-is:          doctests.hs
   hs-source-dirs:   tests
-  build-depends: base, doctest >= 0.9.0 && <0.10
+  build-depends: base, doctest >= 0.9.0
